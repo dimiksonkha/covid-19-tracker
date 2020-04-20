@@ -19,12 +19,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
     
-    private List<CovidStatus> covidStatues = new ArrayList<CovidStatus>();
-    CovidStatus covSta1= new CovidStatus("Bangladesh", 2445, 12.17, 75, 91);
+    List<CovidStatus> covidStatus = new ArrayList<CovidStatus>();
+    CovidStatus cs1= new CovidStatus("Bangladesh", 2445, 12.17, 75, 91);
+//    covidStatus.add(cs1);
+
     
     @RequestMapping("/")
-    public String showMessage(Model model) {
-	model.addAttribute("status",covSta1);
+    public String showHomePage(Model model) {
+        
+        model.addAttribute("status", cs1);
+	//model.addAttribute("status",covSta1.getCountry());
         return "index";
                
 	}

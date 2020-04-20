@@ -18,6 +18,7 @@ public class CovidStatus {
     
     public CovidStatus(String  country,Integer confirmed, Double  casesPerMillion,
             Integer recovered,Integer deaths){
+        this.country = country;
         this.confirmed = confirmed;
         this.casesPerMillion = casesPerMillion;
         this.recovered = recovered;

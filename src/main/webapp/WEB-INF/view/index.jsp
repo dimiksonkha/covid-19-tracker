@@ -12,6 +12,26 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>${status.country}</h1>
+        
+        <h2>COVID-19 STATUS</h2>
+        <table>
+            <thead>
+                <th>Country</th>
+                <th>Confirmed</th>
+                <th>Cases Per Million</th>
+                <th>Recovered</th>
+                <th>Deaths</th>
+         
+            </thead>
+            <tr>
+                <td>${status.country}</td>
+                <td>${status.confirmed}</td>
+                <td>${status.casesPerMillion}</td>
+                <td>${status.recovered}</td>
+                <td>${status.deaths}</td>
+            </tr>
+        </table>
+     
+
     </body>
 </html>

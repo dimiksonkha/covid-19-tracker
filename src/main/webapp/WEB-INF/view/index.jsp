@@ -5,11 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Covid-19 Tracker</title>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
     </head>
     <body>
         
@@ -18,18 +20,21 @@
             <thead>
                 <th>Country</th>
                 <th>Confirmed</th>
-                <th>Cases Per Million</th>
                 <th>Recovered</th>
                 <th>Deaths</th>
+                <th>Action</th>
          
             </thead>
-            <tr>
+            <c:forEach var="status" items="${covidStatus}">
+                 <tr>
                 <td>${status.country}</td>
                 <td>${status.confirmed}</td>
-                <td>${status.casesPerMillion}</td>
                 <td>${status.recovered}</td>
                 <td>${status.deaths}</td>
-            </tr>
+                <td><button>Details</button></td>
+               </tr>
+            </c:forEach>
+           
         </table>
      
 

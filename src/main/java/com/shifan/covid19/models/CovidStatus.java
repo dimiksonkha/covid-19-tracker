@@ -12,15 +12,13 @@ package com.shifan.covid19.models;
 public class CovidStatus {
     private String  country;
     private Integer confirmed;
-    private Double  casesPerMillion; 
     private Integer recovered;
     private Integer deaths;
     
-    public CovidStatus(String  country,Integer confirmed, Double  casesPerMillion,
+    public CovidStatus(String  country,Integer confirmed,
             Integer recovered,Integer deaths){
         this.country = country;
         this.confirmed = confirmed;
-        this.casesPerMillion = casesPerMillion;
         this.recovered = recovered;
         this.deaths = deaths;  
     }
@@ -39,14 +37,6 @@ public class CovidStatus {
 
     public void setConfirmed(Integer confirmed) {
         this.confirmed = confirmed;
-    }
-
-    public Double getCasesPerMillion() {
-        return casesPerMillion;
-    }
-
-    public void setCasesPerMillion(Double casesPerMillion) {
-        this.casesPerMillion = casesPerMillion;
     }
 
     public Integer getRecovered() {

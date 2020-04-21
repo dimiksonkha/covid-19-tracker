@@ -30,7 +30,9 @@ public class HomeController {
     
     @RequestMapping("/")
     public String showHomePage(Model model) {
-       
+      String newConfirmed = ""; 
+      String newRecoverd = "";
+      String newDeaths = ""; 
       String totalConfirmed = ""; 
       String totalRecoverd = "";
       String totalDeaths = "";
@@ -61,6 +63,9 @@ public class HomeController {
               String globalStatus = global[1];
 
               JSONObject jsonObject = new JSONObject(globalStatus.toString());
+              newConfirmed = jsonObject.getInt("NewConfirmed") + "";
+              newRecoverd = jsonObject.getInt("NewRecovered") + "";
+              newDeaths = jsonObject.getInt("NewDeaths") + "";
               totalConfirmed = jsonObject.getInt("TotalConfirmed") + "";
               totalRecoverd = jsonObject.getInt("TotalRecovered") + "";
               totalDeaths = jsonObject.getInt("TotalDeaths") + "";
@@ -99,6 +104,9 @@ public class HomeController {
          
         
         model.addAttribute("covidStatus", list);
+        model.addAttribute("newConfirmed", newConfirmed);
+        model.addAttribute("newRecovered", newRecoverd);
+        model.addAttribute("newDeaths", newDeaths);
         model.addAttribute("totalConfirmed", totalConfirmed);
         model.addAttribute("totalRecovered", totalRecoverd);
         model.addAttribute("totalDeaths", totalDeaths);

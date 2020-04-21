@@ -18,7 +18,13 @@
         <h3>Worldwide Status</h3>
         <table align="center">
             <thead>
-            
+                
+                <tr>     
+                <td>New Confirmed: ${newConfirmed}</td>
+                <td>New Recovered: ${newRecovered}</td>
+                <td>New Deaths: ${newDeaths}</td>
+
+               </tr>
                 <tr>     
                 <td>Total Confirmed: ${totalConfirmed}</td>
                 <td>Total Recovered: ${totalRecovered}</td>

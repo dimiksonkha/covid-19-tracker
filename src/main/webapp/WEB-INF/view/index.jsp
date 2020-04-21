@@ -14,9 +14,9 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
     </head>
     <body>
-        <h2>COVID STATUS</h2>
+        <h2>COVID-19 STATUS</h2>
         <h3>Worldwide Status</h3>
-        <table>
+        <table align="center">
             <thead>
             
                 <tr>     
@@ -30,7 +30,7 @@
         </table>
         
           <h3>Country wise Status</h3>
-        <table>
+        <table align="center">
             <thead>
                 <th>Country</th>
                 <th>Confirmed</th>

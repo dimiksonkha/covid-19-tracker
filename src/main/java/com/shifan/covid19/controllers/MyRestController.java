@@ -7,45 +7,31 @@ package com.shifan.covid19.controllers;
 
 import com.shifan.covid19.models.CovidStatus;
 import java.util.ArrayList;
-import static java.util.Collections.list;
 import java.util.List;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.*;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author dimiksonkha
  */
-@Controller
-public class HomeController {
+@RestController
+public class MyRestController {
     
-
     List list = new ArrayList<>();
     CovidStatus cs1= new CovidStatus("Worldwide", 2435876, 639239, 167369);
     CovidStatus cs2= new CovidStatus("Bangladesh", 2948, 85, 101);
     CovidStatus cs3= new CovidStatus("India", 17656,2842, 559);
     
-    @RequestMapping("/")
-    public String showHomePage(Model model) {
-        String result = null;
-         try {
-            RestTemplate restTemplate = new RestTemplate();
-             
-//            result = restTemplate.getForObject("https://api.covid19api.com/summary", String.class,200);
-            
-            }catch (Exception e){
-            }
-         
+    @GetMapping("/hello")
+    public String showMessage(Model model){
         list.add(cs1);
         list.add(cs2);
         list.add(cs3);
         
         model.addAttribute("covidStatus", list);
-        model.addAttribute("response", result);
         return "index";
-               
-	}
-    
+    }
 }

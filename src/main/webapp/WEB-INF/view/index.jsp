@@ -36,6 +36,8 @@
             </c:forEach>
            
         </table>
+        
+        ${response}
      
 
     </body>

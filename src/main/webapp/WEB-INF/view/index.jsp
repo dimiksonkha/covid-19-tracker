@@ -14,8 +14,22 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
     </head>
     <body>
+        <h2>COVID STATUS</h2>
+        <h3>Worldwide Status</h3>
+        <table>
+            <thead>
+            
+                <tr>     
+                <td>Total Confirmed: ${totalConfirmed}</td>
+                <td>Total Recovered: ${totalRecovered}</td>
+                <td>Total Deaths: ${totalDeaths}</td>
+
+               </tr>
+           
+           
+        </table>
         
-        <h2>COVID-19 STATUS</h2>
+          <h3>Country wise Status</h3>
         <table>
             <thead>
                 <th>Country</th>
@@ -36,9 +50,6 @@
             </c:forEach>
            
         </table>
-        
-        ${response}
-     
-
+   
     </body>
 </html>

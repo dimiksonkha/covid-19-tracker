@@ -8,12 +8,27 @@ package com.shifan.covid19.models;
 /**
  *
  * @author dimiksonkha
+ *  "Country": "ALA Aland Islands",
+            "CountryCode": "AX",
+            "Slug": "ala-aland-islands",
+            "NewConfirmed": 0,
+            "TotalConfirmed": 0,
+            "NewDeaths": 0,
+            "TotalDeaths": 0,
+            "NewRecovered": 0,
+            "TotalRecovered": 0,
+            "Date": "2020-04-21T15:31:29Z"
  */
 public class CovidStatus {
     private String  country;
     private Integer confirmed;
     private Integer recovered;
     private Integer deaths;
+    
+    
+    public CovidStatus(){
+    
+    }
     
     public CovidStatus(String  country,Integer confirmed,
             Integer recovered,Integer deaths){
@@ -51,7 +66,7 @@ public class CovidStatus {
         return deaths;
     }
 
-    public void setDeaths(Integer Deaths) {
+    public void setDeaths(Integer deaths) {
         this.deaths = deaths;
     }
 }

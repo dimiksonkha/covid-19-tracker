@@ -6,11 +6,13 @@
 package com.shifan.covid19.controllers;
 
 import com.shifan.covid19.models.CovidStatus;
+import com.shifan.covid19.models.Location;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -27,8 +29,9 @@ public class HomeController {
     
 
     List list = new ArrayList<>();
+    List locations = new ArrayList<>();
     
-    @RequestMapping("/")
+    @RequestMapping("/status")
     public String showHomePage(Model model) {
       String newConfirmed = ""; 
       String newRecoverd = "";
@@ -116,5 +119,36 @@ public class HomeController {
         return "index";
                
 	}
+    @RequestMapping("/")
+    public String showMap(Model model){
+        Location location1 = new Location();
+        location1.setLat(23.810);
+        location1.setLon(90.412);
+        location1.setConfirmed(1000);
+        location1.setRecovered(100);
+        location1.setDeaths(101);
+        
+        Location location2 = new Location();
+        location2.setLat(23.239);
+        location2.setLon(90.187);
+        location2.setConfirmed(20);
+        location2.setRecovered(3);
+        location2.setDeaths(4);
+        
+        Location location3 = new Location();
+        location3.setLat(22.673);
+        location3.setLon(89.396);
+        location3.setConfirmed(5);
+        location3.setRecovered(3);
+        location3.setDeaths(1);
+        
+        locations.add(location1);
+        locations.add(location2);
+        locations.add(location3);
+        
+        model.addAttribute("locations",locations);
+        return "map";
+    
+    }
     
 }

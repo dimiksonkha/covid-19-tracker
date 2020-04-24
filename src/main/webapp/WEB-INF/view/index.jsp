@@ -46,7 +46,7 @@
          
             </thead>
             <c:forEach var="status" items="${covidStatus}">
-                 <tr>
+                <tr>
                 <td>${status.country}</td>
                 <td>${status.confirmed}</td>
                 <td>${status.recovered}</td>

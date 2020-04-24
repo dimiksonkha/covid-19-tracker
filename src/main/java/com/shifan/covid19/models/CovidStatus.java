@@ -8,36 +8,37 @@ package com.shifan.covid19.models;
 /**
  *
  * @author dimiksonkha
- *  "Country": "ALA Aland Islands",
-            "CountryCode": "AX",
-            "Slug": "ala-aland-islands",
-            "NewConfirmed": 0,
-            "TotalConfirmed": 0,
-            "NewDeaths": 0,
-            "TotalDeaths": 0,
-            "NewRecovered": 0,
-            "TotalRecovered": 0,
-            "Date": "2020-04-21T15:31:29Z"
+ 
  */
 public class CovidStatus {
     private String  country;
     private Integer confirmed;
     private Integer recovered;
     private Integer deaths;
+    private Double  lat;
+    private Double  lng;
     
     
     public CovidStatus(){
     
     }
-    
-    public CovidStatus(String  country,Integer confirmed,
-            Integer recovered,Integer deaths){
-        this.country = country;
-        this.confirmed = confirmed;
-        this.recovered = recovered;
-        this.deaths = deaths;  
+
+    public Double getLat() {
+        return lat;
     }
 
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
+
+    public Double getLng() {
+        return lng;
+    }
+
+    public void setLng(Double lng) {
+        this.lng = lng;
+    }
+    
     public String getCountry() {
         return country;
     }

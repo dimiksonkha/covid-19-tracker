@@ -34,7 +34,7 @@
        </style>
 </head>
 <body>
-     <h3>My Google Maps Demo</h3>
+     <h3>Covid-19 Map</h3>
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
@@ -44,9 +44,9 @@
 function initMap() {
   // The location of Uluru
   var centerPos = {lat: 23.685, lng: 90.356};
-  var locs = [[]];;
+  var locs = [[]];
  <c:forEach var="location" items="${locations}">
-        locs.push([${location.lat},${location.lon}, ${location.confirmed}, ${location.recovered}, ${location.deaths}]); 
+        locs.push([${location.lat},${location.lng}, ${location.confirmed}, ${location.recovered}, ${location.deaths}]); 
  </c:forEach>
      
     

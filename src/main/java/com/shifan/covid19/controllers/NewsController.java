@@ -49,18 +49,24 @@ public class NewsController {
             
              result = response.toString();
             
-             JSONObject jsonObject = new JSONObject(result);
+             JSONObject jsonObject = new JSONObject(result.toString());
              JSONArray jsonArray = jsonObject.getJSONArray("articles");
              
               for (int i = 0; i < jsonArray.length(); i++) {
                   JSONObject newsObject = jsonArray.getJSONObject(i);
                   News news = new News();
-                  news.setAuthor(newsObject.getString("author"));
+                  
+//                  if(newsObject.isNull(newsObject.getString("auther"))){
+//                   
+//                  }else{
+//                  news.setAuthor(newsObject.getString("author"));
+//                  }
+                 
                   news.setContent(newsObject.getString("content"));
                   news.setDescription(newsObject.getString("description"));
                   news.setTitle(newsObject.getString("title"));
                   news.setUrl(newsObject.getString("url"));
-                  news.setAuthor(newsObject.getString("author"));
+                  
                   
                   JSONObject source = newsObject.getJSONObject("source");
                   
@@ -84,6 +90,7 @@ public class NewsController {
      loadData();
      
      model.addAttribute("newsList",newsList);
+     model.addAttribute("result", result);
      
        return "news"; 
     }

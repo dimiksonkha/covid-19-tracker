@@ -77,7 +77,8 @@ public class NewsController {
     
     }
     
-    @RequestMapping("/")
+    
+    @RequestMapping("/news")
     public String showNews(Model model){
      
      loadData();

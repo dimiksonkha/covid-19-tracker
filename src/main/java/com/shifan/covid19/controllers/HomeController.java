@@ -21,7 +21,7 @@ public class HomeController {
     private List list = statusData.loadData();
 
    
-    @RequestMapping("/status")
+    @RequestMapping("/")
     public String showHomePage(Model model) {
       
   

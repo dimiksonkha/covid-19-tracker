@@ -102,7 +102,7 @@ public class LabController {
     
     }
     
-    @RequestMapping("/")
+    @RequestMapping("/labs")
     public String showLabs(Model model){
      
      loadData();

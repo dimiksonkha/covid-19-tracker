@@ -67,8 +67,8 @@
                       <div class="card" style="width: 100%; margin-bottom: 20px">
  
                         <div class="card-body">
-                          <h5 class="card-title"><h2>${news.title}</h2></h5>
-                          <p class="card-text">${news.description}</p>
+                          <h5 class="card-title">${news.title}</h5>
+<!--                          <p class="card-text">${news.description}</p>-->
                           <p class="card-text">${news.content}<a href="${news.url}" target="_blank" >Read more</a><br></p>
                           <b>Source:</b>${news.source}
                         </div>

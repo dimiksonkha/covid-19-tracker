@@ -67,7 +67,7 @@
        <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
          <div class="card-header">New Confirmed</div>
          <div class="card-body">
-           <h1 class="card-title">100875</h1>
+       <h1 class="card-title">${newConfirmed}</h1>
          </div>
        </div>
     </div>
@@ -75,7 +75,7 @@
       <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
       <div class="card-header">New Recovered</div>
       <div class="card-body">
-        <h1 class="card-title">50587</h1>
+        <h1 class="card-title">${newRecovered}</h1>
       </div>
       </div>
      </div>
@@ -84,7 +84,7 @@
        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
        <div class="card-header">New Deaths</div>
        <div class="card-body">
-         <h1 class="card-title">6147</h1>
+         <h1 class="card-title">${newDeaths}</h1>
        </div>
        </div>
 
@@ -102,7 +102,7 @@
         <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
           <div class="card-header">Total Confirmed</div>
           <div class="card-body">
-            <h1 class="card-title">2807945</h1>
+            <h1 class="card-title">${totalConfirmed}</h1>
           </div>
         </div>
      </div>
@@ -110,7 +110,7 @@
        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
        <div class="card-header">Total Recovered</div>
        <div class="card-body">
-         <h1 class="card-title">788204</h1>
+         <h1 class="card-title">${totalRecovered}</h1>
        </div>
        </div>
       </div>
@@ -119,7 +119,7 @@
         <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
         <div class="card-header">Total Deaths</div>
         <div class="card-body">
-          <h1 class="card-title">196960</h1>
+          <h1 class="card-title">${totalDeaths}</h1>
         </div>
         </div>
 
